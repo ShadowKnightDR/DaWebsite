@@ -49,6 +49,22 @@ a.card:hover{border-color:var(--accent)}
 .card.soon{border-style:dashed;border-color:var(--accent)}
 .aside{background:var(--panel);border:3px dashed var(--accent);padding:1.25rem 1.5rem;font-size:1.15rem}
 footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+.aside{display:flex;align-items:center;gap:1rem}
+.wheel{flex:none;width:3.6rem;height:3.6rem;padding:0;border:2px solid var(--accent);background:rgba(11,11,13,.6);color:var(--ink);border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.wheel:hover{border-color:var(--gold);color:var(--gold)}
+.wheel svg{width:78%;height:78%;--a:0deg;--h:0deg;transform:rotate(calc(var(--a) + var(--h)));transition:transform .45s ease}
+.wheel:hover svg,.wheel:focus-visible svg{--h:22.5deg}
+@media(prefers-reduced-motion:reduce){.wheel:hover svg,.wheel:focus-visible svg{--h:0deg}.lore{transition:none!important}}
+.lore{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .6s ease,visibility .6s}
+.lore.open{grid-template-rows:1fr;visibility:visible}
+.lore-clip{overflow:hidden;min-height:0}
+.lore-in{padding:2.5rem 0 1rem;border-top:3px solid var(--accent)}
+.lore-in p{max-width:60ch}
+.lore-in p{margin:.45rem 0}
+.lore-in .chap{font-size:1.5rem;margin:0 0 1.2rem;color:var(--accent)}
+.lore-in h4{font-family:"Pixelify Sans","Courier New",monospace;font-size:1.25rem;margin:2rem 0 .6rem;color:var(--gold)}
+.lore-in blockquote{max-width:60ch;margin:1rem 0;padding:.7rem 1rem;border-left:4px solid var(--accent);background:var(--panel)}
+.lore-in{padding-bottom:2.5rem}
 </style>
 </head>
 <body>
@@ -88,8 +104,116 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
   </section>
 
   <section>
-    <p class="aside">Also, have you watched Jujutsu Kaisen?</p>
+    <div class="aside">
+      <button class="wheel" id="wheel" type="button" aria-label="Spin the wheel to open the lore" aria-expanded="false" aria-controls="lore"><svg viewBox="60 60 240 240" aria-hidden="true"><g stroke="currentColor" stroke-width="6" stroke-linecap="round" fill="none"><circle cx="180" cy="180" r="65"/><path d="M180 180V75M180 180V285M180 180H75M180 180H285M180 180L105.8 105.8M180 180L254.2 105.8M180 180L105.8 254.2M180 180L254.2 254.2"/></g><g fill="currentColor"><circle cx="180" cy="180" r="14"/><circle cx="180" cy="75" r="16"/><circle cx="180" cy="285" r="16"/><circle cx="75" cy="180" r="16"/><circle cx="285" cy="180" r="16"/><circle cx="105.8" cy="105.8" r="16"/><circle cx="254.2" cy="105.8" r="16"/><circle cx="105.8" cy="254.2" r="16"/><circle cx="254.2" cy="254.2" r="16"/></g></svg></button>
+      <span>Also, have you watched Jujutsu Kaisen?</span>
+    </div>
   </section>
+  <div class="lore" id="lore" inert>
+    <div class="lore-clip"><div class="lore-in">
+      <h2>The Lore</h2>
+      <h3 class="chap">Chapter I &mdash; The First Day</h3>
+      <p>Before the nations were built, before the territories were claimed, before the Ender Dragon fell&hellip;</p>
+      <p><strong>there were only two.</strong></p>
+      <p>The world had been opened.</p>
+      <p>At the neutral settlement near spawn, two of the four future rulers arrived: <strong>ShadowKnightDR</strong>, destined to rule the skies and the End, and <strong>InfinityXGaming</strong>, claimant of the Overworld and its lands.</p>
+      <p>The other two&mdash;<strong>Nirbhay</strong> of the Sea and <strong>Nanami_Senpai</strong> of the Nether&mdash;were nowhere to be seen.</p>
+      <p>But the Founding Era had begun.</p>
+      <h4>The Guardian&rsquo;s Mistake</h4>
+      <p>Shadow&rsquo;s first moments in the new world were not glorious.</p>
+      <p>A zombie appeared near the village.</p>
+      <p>An Iron Golem moved to defend its home.</p>
+      <p>Shadow stood between them.</p>
+      <p>The Golem swung.</p>
+      <p>The zombie was the intended target.</p>
+      <p><strong>Shadow was not.</strong></p>
+      <p>Yet the blow landed.</p>
+      <blockquote><strong>ShadowKnightDR was slain by Iron Golem.</strong></blockquote>
+      <p>And thus, the future ruler of Air and the End became the <strong>first casualty of the Four Domains</strong>&mdash;killed by an ally while the ally was attempting to save him.</p>
+      <p>A fitting beginning.</p>
+      <h4>The Arrival of InfinityXGaming</h4>
+      <p>Shortly afterward, InfinityXGaming entered the world.</p>
+      <p>The village, however, was already in chaos.</p>
+      <p>Zombies descended upon its inhabitants, claiming villager after villager. Even the librarian fell.</p>
+      <p>But InfinityXGaming did not retreat.</p>
+      <p>He began gathering resources.</p>
+      <p>Stone.</p>
+      <p>Iron.</p>
+      <p>Weapons.</p>
+      <p>Armor.</p>
+      <p>With every advancement, the man who had once feared caves began to look increasingly capable.</p>
+      <p><strong>Stone Age.</strong></p>
+      <p><strong>Acquire Hardware.</strong></p>
+      <p><strong>Getting an Upgrade.</strong></p>
+      <p><strong>Isn&rsquo;t It Iron Pick.</strong></p>
+      <p>Then came:</p>
+      <p><strong>Monster Hunter.</strong></p>
+      <p>InfinityXGaming was changing.</p>
+      <p>The Land Domain had found its warrior.</p>
+      <h4>The First Battles</h4>
+      <p>Shadow was not spared the dangers of the new world either.</p>
+      <p>Zombies struck him down more than once.</p>
+      <p>But he returned.</p>
+      <p>He fought.</p>
+      <p>He gathered.</p>
+      <p>And somehow, amid the chaos, began assembling an unusual collection of equipment.</p>
+      <p>His leather armor was dyed <strong>red</strong>, chosen to match his ShadowKnight skin.</p>
+      <p>His golden leggings bore <strong>Thorns II</strong>.</p>
+      <p>His golden chest plate carried <strong>Mending</strong>.</p>
+      <p>And hidden away in a chest was something far more important:</p>
+      <h4>The Pants of the First Age</h4>
+      <p>A pair of leather pants enchanted with <strong>Thorns I</strong>.</p>
+      <p>Their durability had fallen to only <strong>3%</strong>.</p>
+      <p>They were no longer armor.</p>
+      <p>They were an artifact.</p>
+      <p>Shadow placed them in safekeeping, preserving one of the earliest relics of the new world.</p>
+      <h4>The Enderman</h4>
+      <p>Then InfinityXGaming encountered something different.</p>
+      <p>An Enderman.</p>
+      <p>The battle ended with the Enderman victorious.</p>
+      <blockquote><strong>InfinityXGaming was slain by Enderman.</strong></blockquote>
+      <p>The creature had claimed its first victory over the ruler of Land.</p>
+      <p>But elsewhere, Shadow had already slain <strong>three Enderman</strong>.</p>
+      <p>There was only one problem.</p>
+      <p>Three Enderman.</p>
+      <p><strong>One Ender Pearl.</strong></p>
+      <p>The End itself appeared to be demanding a price.</p>
+      <h4>The Trail Check</h4>
+      <p>Eventually, InfinityXGaming departed.</p>
+      <p>Shadow remained.</p>
+      <p>The next step of the plan was already forming in his mind.</p>
+      <p>The trial chamber.</p>
+      <p>The chamber had been identified as the closest known trial chamber.</p>
+      <p>Shadow temporarily abandoned the rules of the mortal world.</p>
+      <p>He entered <strong>Creative Mode</strong>.</p>
+      <p>He teleported to the chamber.</p>
+      <p>And there, the first opportunity to be the strongest was investigated.</p>
+      <p>The experiment complete, Shadow returned to spawn and restored himself to Survival.</p>
+      <p>The founding expedition had begun&mdash;but the true journey had not.</p>
+      <h4>The End of Day One</h4>
+      <p>The first day had produced no Dragon.</p>
+      <p>No Netherite.</p>
+      <p>No Elytras.</p>
+      <p>No great kingdom.</p>
+      <p>Instead, it produced something much more important:</p>
+      <p><strong>the beginning.</strong></p>
+      <p>Two rulers had entered the world.</p>
+      <p>One was learning to fight.</p>
+      <p>The other was learning to plan.</p>
+      <p>The village had already lost its inhabitants.</p>
+      <p>The Iron Golem had accidentally killed one of its supposed allies.</p>
+      <p>An Enderman had claimed another.</p>
+      <p>And somewhere beyond the ruined portal waited the Nether.</p>
+      <p>Beyond the Nether waited the Stronghold.</p>
+      <p>Beyond the Stronghold waited the End.</p>
+      <p>And beyond the End&hellip;</p>
+      <p><strong>belonged to Shadow.</strong></p>
+      <p>The Four Domains had not yet been established.</p>
+      <p>But the first day had already written its opening chapter.</p>
+      <blockquote><strong>The Founding Era had begun.</strong></blockquote>
+      <blockquote><strong>And nobody yet knew what these four players would become.</strong></blockquote>
+    </div></div>
+  </div>
 
   <footer>Shadow Plans MC &mdash; a fan channel. Not affiliated with Mojang or Microsoft.</footer>
 </main>
@@ -125,6 +249,30 @@ el.addEventListener("pointermove",function(e){
 function up(){if(!drag)return;drag=false;if(moved<4)kick(28);start()}
 el.addEventListener("pointerup",up);el.addEventListener("pointercancel",up);
 el.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();kick(28)}});
+})();
+</script>
+<script>
+(function(){
+var btn=document.getElementById("wheel"),svg=btn.querySelector("svg"),lore=document.getElementById("lore");
+var a=0,busy=false,mq=window.matchMedia("(prefers-reduced-motion: reduce)");
+function setOpen(o){lore.classList.toggle("open",o);btn.setAttribute("aria-expanded",o?"true":"false");if(o){lore.removeAttribute("inert")}else{lore.setAttribute("inert","")}}
+function finish(){
+  if(!busy)return;busy=false;svg.style.transition="";
+  var open=!lore.classList.contains("open");
+  setOpen(open);
+  if(open){setTimeout(function(){lore.scrollIntoView({behavior:mq.matches?"auto":"smooth",block:"start"})},mq.matches?0:620)}
+}
+btn.addEventListener("click",function(){
+  if(busy)return;busy=true;
+  if(mq.matches){finish();return}
+  var turns=1+Math.floor(Math.random()*2),done=false;
+  function end(){if(done)return;done=true;finish()}
+  a+=360*turns;
+  svg.style.transition="transform 1.5s cubic-bezier(.15,.7,.2,1)";
+  svg.style.setProperty("--a",a+"deg");
+  svg.addEventListener("transitionend",function h(e){if(e.propertyName==="transform"){svg.removeEventListener("transitionend",h);end()}});
+  setTimeout(end,1800);
+});
 })();
 </script>
 </body>
